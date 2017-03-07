@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) Pushbots *PushbotsClient;
 @end
 
 @implementation AppDelegate
@@ -17,9 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+   self.PushbotsClient = [[Pushbots alloc] initWithAppId:@"58a422294a9efa04cb8b4568" prompt:YES];
+    //Track Push notification opens while launching the app form it
+    [self.PushbotsClient trackPushNotificationOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Register the deviceToken on Pushbots
+    [self.PushbotsClient registerOnPushbots:deviceToken];
+}
 
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"Notification Registration Error %@", [error description]);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

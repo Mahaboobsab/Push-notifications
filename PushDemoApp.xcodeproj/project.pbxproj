@@ -15,6 +15,11 @@
 		291885361E54313000396CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 291885341E54313000396CC8 /* LaunchScreen.storyboard */; };
 		291885411E54313000396CC8 /* PushDemoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 291885401E54313000396CC8 /* PushDemoAppTests.m */; };
 		2918854C1E54313000396CC8 /* PushDemoAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918854B1E54313000396CC8 /* PushDemoAppUITests.m */; };
+		2918855A1E544A5500396CC8 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291885591E544A5500396CC8 /* Pushbots.framework */; };
+		2918855D1E544A8600396CC8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2918855C1E544A8600396CC8 /* CoreTelephony.framework */; };
+		2918855F1E544AB400396CC8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2918855E1E544AB400396CC8 /* SystemConfiguration.framework */; };
+		291885611E544AC700396CC8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291885601E544AC700396CC8 /* MobileCoreServices.framework */; };
+		291885631E544ADD00396CC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 291885621E544ADD00396CC8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		291885471E54313000396CC8 /* PushDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2918854B1E54313000396CC8 /* PushDemoAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushDemoAppUITests.m; sourceTree = "<group>"; };
 		2918854D1E54313000396CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		291885591E544A5500396CC8 /* Pushbots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushbots.framework; sourceTree = "<group>"; };
+		2918855C1E544A8600396CC8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2918855E1E544AB400396CC8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		291885601E544AC700396CC8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		291885621E544ADD00396CC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		291885641E544DDA00396CC8 /* PushDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemoApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291885631E544ADD00396CC8 /* CoreLocation.framework in Frameworks */,
+				291885611E544AC700396CC8 /* MobileCoreServices.framework in Frameworks */,
+				2918855F1E544AB400396CC8 /* SystemConfiguration.framework in Frameworks */,
+				2918855D1E544A8600396CC8 /* CoreTelephony.framework in Frameworks */,
+				2918855A1E544A5500396CC8 /* Pushbots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +97,12 @@
 		2918851A1E54312F00396CC8 = {
 			isa = PBXGroup;
 			children = (
+				291885591E544A5500396CC8 /* Pushbots.framework */,
 				291885251E54312F00396CC8 /* PushDemoApp */,
 				2918853F1E54313000396CC8 /* PushDemoAppTests */,
 				2918854A1E54313000396CC8 /* PushDemoAppUITests */,
 				291885241E54312F00396CC8 /* Products */,
+				2918855B1E544A8600396CC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +119,7 @@
 		291885251E54312F00396CC8 /* PushDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				291885641E544DDA00396CC8 /* PushDemoApp.entitlements */,
 				291885291E54313000396CC8 /* AppDelegate.h */,
 				2918852A1E54313000396CC8 /* AppDelegate.m */,
 				2918852C1E54313000396CC8 /* ViewController.h */,
@@ -138,6 +157,17 @@
 				2918854D1E54313000396CC8 /* Info.plist */,
 			);
 			path = PushDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		2918855B1E544A8600396CC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				291885621E544ADD00396CC8 /* CoreLocation.framework */,
+				291885601E544AC700396CC8 /* MobileCoreServices.framework */,
+				2918855E1E544AB400396CC8 /* SystemConfiguration.framework */,
+				2918855C1E544A8600396CC8 /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +237,19 @@
 				TargetAttributes = {
 					291885221E54312F00396CC8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4WXHX2LK83;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2918853B1E54313000396CC8 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -424,6 +466,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushDemoApp/PushDemoApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Umesh venkatesh (4WXHX2LK83)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4WXHX2LK83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PushDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NeoRays.PushDemoApp;
@@ -435,6 +485,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushDemoApp/PushDemoApp.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4WXHX2LK83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PushDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NeoRays.PushDemoApp;
@@ -507,6 +565,7 @@
 				291885521E54313000396CC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		291885531E54313000396CC8 /* Build configuration list for PBXNativeTarget "PushDemoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +574,7 @@
 				291885551E54313000396CC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		291885561E54313000396CC8 /* Build configuration list for PBXNativeTarget "PushDemoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +583,7 @@
 				291885581E54313000396CC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
